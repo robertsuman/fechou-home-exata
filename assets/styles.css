@@ -945,3 +945,256 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   }
 
 }
+
+/* =========================================================
+   Páginas legais - Privacidade e Termos
+   Usa o mesmo design system, header, footer e variáveis da Home
+   ========================================================= */
+
+.legal-page{
+  background:#fff;
+}
+
+.legal-hero{
+  padding:56px 0 28px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 85% 10%, rgba(31,200,85,.08), transparent 28%),
+    linear-gradient(180deg,#fff 0%,#fbfdfb 100%);
+}
+
+.legal-breadcrumb{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-bottom:18px;
+  color:var(--green-dark);
+  font-size:14px;
+  font-weight:700;
+}
+
+.legal-breadcrumb:hover{
+  text-decoration:underline;
+}
+
+.legal-hero h1{
+  max-width:860px;
+  margin:0 0 14px;
+  font-size:clamp(38px,5vw,62px);
+  line-height:1.03;
+  letter-spacing:-.045em;
+}
+
+.legal-hero p{
+  max-width:780px;
+  margin:0;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.7;
+}
+
+.legal-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 18px;
+  margin-top:22px;
+  color:#737b87;
+  font-size:13px;
+}
+
+.legal-meta span{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+}
+
+.legal-main{
+  padding:42px 0 68px;
+}
+
+.legal-layout{
+  display:grid;
+  grid-template-columns:250px minmax(0,820px);
+  gap:54px;
+  align-items:start;
+  justify-content:center;
+}
+
+.legal-toc{
+  position:sticky;
+  top:118px;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+}
+
+.legal-toc strong{
+  display:block;
+  margin-bottom:12px;
+  font-size:14px;
+}
+
+.legal-toc a{
+  display:block;
+  padding:7px 0;
+  color:#66707c;
+  font-size:13px;
+  line-height:1.4;
+}
+
+.legal-toc a:hover{
+  color:var(--green-dark);
+}
+
+.legal-content{
+  min-width:0;
+}
+
+.legal-intro-card,
+.legal-callout{
+  padding:22px 24px;
+  border:1px solid #dcecdf;
+  border-radius:18px;
+  background:var(--green-soft);
+}
+
+.legal-intro-card{
+  margin-bottom:34px;
+}
+
+.legal-intro-card p,
+.legal-callout p{
+  margin:0;
+  color:#405047;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.legal-section{
+  scroll-margin-top:120px;
+  padding:0 0 30px;
+  margin:0 0 30px;
+  border-bottom:1px solid var(--line);
+}
+
+.legal-section:last-child{
+  border-bottom:0;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.legal-section h2{
+  margin:0 0 14px;
+  font-size:24px;
+  line-height:1.25;
+  letter-spacing:-.02em;
+}
+
+.legal-section h3{
+  margin:22px 0 10px;
+  font-size:17px;
+  line-height:1.35;
+}
+
+.legal-section p{
+  margin:0 0 14px;
+  color:#4d5663;
+  font-size:15px;
+  line-height:1.78;
+}
+
+.legal-section ul,
+.legal-section ol{
+  margin:10px 0 16px;
+  padding-left:22px;
+  color:#4d5663;
+  font-size:15px;
+  line-height:1.72;
+}
+
+.legal-section li{
+  margin-bottom:7px;
+}
+
+.legal-section a{
+  color:var(--green-dark);
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+.legal-section strong{
+  color:#27303c;
+}
+
+.legal-callout{
+  margin:18px 0;
+}
+
+.legal-callout strong{
+  display:block;
+  margin-bottom:6px;
+  color:#1e6f3a;
+}
+
+.legal-contact-card{
+  margin-top:18px;
+  padding:22px 24px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fbfcfb;
+}
+
+.legal-contact-card h3{
+  margin-top:0;
+}
+
+.legal-note{
+  margin-top:28px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  color:#7b838e;
+  font-size:12px;
+  line-height:1.6;
+}
+
+@media (max-width:900px){
+  .legal-layout{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .legal-toc{
+    position:static;
+  }
+}
+
+@media (max-width:760px){
+  .legal-hero{
+    padding:38px 0 24px;
+  }
+
+  .legal-hero h1{
+    font-size:40px;
+  }
+
+  .legal-main{
+    padding:28px 0 50px;
+  }
+
+  .legal-toc{
+    display:none;
+  }
+
+  .legal-section h2{
+    font-size:21px;
+  }
+
+  .legal-intro-card,
+  .legal-callout,
+  .legal-contact-card{
+    padding:18px;
+    border-radius:16px;
+  }
+}
