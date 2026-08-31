@@ -1200,50 +1200,35 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 }
 
 /* ==========================================================
-   HOME - E DEPOIS DO SERVIÇO?
-   Responsividade
+   HOME - "E depois do serviço?"
+   Correção responsiva final
    ========================================================== */
 
-/* Desktop */
-.business-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.business-card {
-  min-width: 0;
-}
-
-/* Tablet */
 @media (max-width: 1024px) {
-
   .business-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
 
-  /* O último card ocupa toda a largura */
   .business-card:last-child {
     grid-column: 1 / -1;
   }
-
 }
 
-/* Mobile */
 @media (max-width: 760px) {
-
   .business-section {
     overflow: hidden;
   }
 
   .business-section .container {
     width: 100%;
+    padding: 26px 20px;
   }
 
   .business-heading {
     max-width: 100%;
-    padding-inline: 4px;
+    margin-bottom: 24px;
+    text-align: center;
   }
 
   .business-heading h2 {
@@ -1252,7 +1237,7 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke
     letter-spacing: -0.03em;
   }
 
-  .business-heading > p {
+  .business-heading p {
     font-size: 16px;
     line-height: 1.65;
   }
@@ -1266,43 +1251,33 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   .business-card,
   .business-card:last-child {
     grid-column: auto;
-
     display: grid;
     grid-template-columns: 52px minmax(0, 1fr);
     column-gap: 14px;
     align-items: center;
-
     width: 100%;
     min-width: 0;
-
     padding: 18px;
-
     text-align: left;
   }
 
   .business-icon {
     grid-row: 1 / 3;
-
     width: 52px;
     height: 52px;
-
     margin: 0;
   }
 
   .business-card h3 {
     margin: 0 0 4px;
-
     font-size: 17px;
     line-height: 1.25;
   }
 
   .business-card p {
     margin: 0;
-
     font-size: 14px;
     line-height: 1.5;
-
     overflow-wrap: anywhere;
   }
-
 }
