@@ -96,6 +96,14 @@
   line-height: 1.7 !important;
 }
 
+/* Hover dos botões claros dentro dos CTAs verdes */
+.final-cta .btn.light-border:hover,
+.feature-cta .btn.light-border:hover {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: var(--green-dark) !important;
+}
+
 /* Rodapé global */
 .site-footer .footer-grid {
   display: grid;
