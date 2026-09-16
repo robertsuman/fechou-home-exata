@@ -130,9 +130,12 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 .green-list li::before{background:var(--green-dark)}
 .blue-list li::before{background:var(--blue)}
 .orange-list li::before{background:var(--orange)}
+.feature-cta{margin-top:24px}
 
 .docs-layout{display:flex;align-items:center;gap:20px}
 .small-phone{position:relative;width:170px;flex:0 0 170px;transform:none;left:auto;top:auto;right:auto}
+.reports-home-visual{justify-content:center}
+.reports-home-phone-secondary{transform:translateY(18px)}
 .pdf-preview{width:295px;max-width:100%;background:#fff;border:1px solid #eaedf0;border-radius:18px;padding:18px;box-shadow:0 6px 22px rgba(17,24,39,.06)}
 .pdf-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
 .pdf-top img{width:78px}
@@ -494,6 +497,15 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   .sales-layout {
     width: 100%;
     justify-content: center;
+  }
+
+  .reports-home-visual {
+    gap: 12px;
+  }
+
+  .reports-home-visual .small-phone {
+    width: min(126px, calc((100% - 12px) / 2));
+    flex: 0 1 126px;
   }
 
   .footer-grid {
