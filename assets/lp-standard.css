@@ -123,6 +123,17 @@
   }
 }
 
+@media (max-width: 760px) {
+  /* O CTA final usa o mesmo elemento como .container e .cta-box.
+     Como .container vira 100% no mobile, o fundo verde encostava na viewport. */
+  .final-cta .container.cta-box {
+    width: calc(100% - 40px) !important;
+    max-width: 520px !important;
+    margin-inline: auto !important;
+    padding: 30px 24px !important;
+  }
+}
+
 @media (max-width: 600px) {
   .lp-faq { padding: 56px 0 !important; }
 
