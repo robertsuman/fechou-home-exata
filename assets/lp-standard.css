@@ -1,0 +1,139 @@
+/* Padrão global de FAQ e rodapé — referência: LP de Relatórios */
+
+.lp-faq {
+  padding: 80px 0 !important;
+  background: #f7f9f8 !important;
+}
+
+.lp-faq-grid {
+  display: grid !important;
+  grid-template-columns: .7fr 1.3fr !important;
+  align-items: start !important;
+  gap: 80px !important;
+}
+
+.lp-faq-intro {
+  position: sticky !important;
+  top: 110px !important;
+}
+
+.lp-faq-intro h2 {
+  margin: 0 0 16px !important;
+  font-size: clamp(32px, 4vw, 46px) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -.035em !important;
+}
+
+.lp-faq-intro p {
+  margin: 0 !important;
+  max-width: none !important;
+  color: var(--muted) !important;
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+}
+
+.lp-faq-list {
+  display: grid !important;
+  gap: 12px !important;
+  border: 0 !important;
+}
+
+.lp-faq-list details {
+  overflow: hidden !important;
+  padding: 0 !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 18px !important;
+  background: #fff !important;
+  box-shadow: 0 8px 24px rgba(34,38,53,.05) !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+
+.lp-faq-list details[open] {
+  border-color: rgba(31,200,85,.45) !important;
+  box-shadow: 0 12px 30px rgba(31,200,85,.09) !important;
+}
+
+.lp-faq-list summary {
+  position: relative !important;
+  padding: 22px 64px 22px 24px !important;
+  list-style: none !important;
+  color: var(--text) !important;
+  font-size: 17px !important;
+  font-weight: 750 !important;
+  line-height: 1.4 !important;
+  cursor: pointer !important;
+}
+
+.lp-faq-list summary::-webkit-details-marker { display: none !important; }
+
+.lp-faq-list summary::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  right: 22px !important;
+  width: 32px !important;
+  height: 32px !important;
+  transform: translateY(-50%) !important;
+  border-radius: 50% !important;
+  background:
+    linear-gradient(var(--green-dark),var(--green-dark)) center / 16px 3px no-repeat,
+    linear-gradient(var(--green-dark),var(--green-dark)) center / 3px 16px no-repeat,
+    var(--green-soft) !important;
+}
+
+.lp-faq-list details[open] summary::after {
+  content: "" !important;
+  background:
+    linear-gradient(var(--green-dark),var(--green-dark)) center / 16px 3px no-repeat,
+    var(--green-soft) !important;
+}
+
+.lp-faq-list details p {
+  margin: 0 !important;
+  padding: 0 64px 22px 24px !important;
+  color: var(--muted) !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+/* Rodapé global */
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1.35fr repeat(3, .8fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.site-footer .footer-brand img { display:block; }
+.site-footer .footer-actions { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.site-footer .footer-column { display:flex; flex-direction:column; gap:10px; }
+.site-footer .footer-column h4 { margin:0 0 6px; }
+
+@media (max-width: 900px) {
+  .lp-faq-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .lp-faq-intro { position: static !important; }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lp-faq { padding: 56px 0 !important; }
+
+  .lp-faq-list summary {
+    padding: 19px 58px 19px 20px !important;
+    font-size: 16px !important;
+  }
+
+  .lp-faq-list details p {
+    padding: 0 20px 20px !important;
+  }
+
+  .site-footer .footer-grid { grid-template-columns: 1fr; }
+}
