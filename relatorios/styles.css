@@ -49,6 +49,8 @@
 .period-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:0 22px 55px rgba(34,38,53,.08)}
 .period-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}.period-tabs span{padding:10px 17px;border:1px solid var(--line);border-radius:999px;font-size:13px}.period-tabs .active{color:var(--green-dark);border-color:var(--green);background:var(--green-soft)}
 .period-chart{height:210px;display:flex;align-items:flex-end;gap:14px;border-bottom:1px solid var(--line);padding:0 10px}.period-chart i{display:block;flex:1;background:linear-gradient(180deg,var(--green),#a7ebbb);border-radius:8px 8px 0 0}.period-card small{display:block;margin-top:14px;color:var(--muted)}
+.period-image{width:100%;min-width:0}
+.period-image img{display:block;width:100%;height:auto}
 .reports-how{background:var(--green-soft)}.reports-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:42px}.reports-steps article{background:#fff;border:1px solid #dcefe2;border-radius:20px;padding:26px}.reports-steps article>span{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:var(--green);color:#fff;font-weight:900}.reports-steps h3{margin:18px 0 8px}.reports-steps p{color:var(--muted);line-height:1.6;margin:0}
 .reports-seo-box{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center;padding:44px;border:1px solid var(--line);border-radius:28px}.reports-seo-box h2{font-size:34px;line-height:1.15;margin:18px 0 0}.reports-seo-box>p{color:var(--muted);font-size:17px;line-height:1.75;margin:0}
 
