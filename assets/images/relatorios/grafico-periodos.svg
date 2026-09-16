@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Evolução anual das vendas</title>
+  <desc id="desc">Gráfico em colunas com valores em reais no eixo vertical e meses de janeiro a dezembro no eixo horizontal.</desc>
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#55c968"/>
+      <stop offset="1" stop-color="#bdeec7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#182032" flood-opacity=".09"/>
+    </filter>
+  </defs>
+
+  <rect x="40" y="30" width="1120" height="690" rx="46" fill="#fff" stroke="#e4e8e6" stroke-width="2" filter="url(#shadow)"/>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="24" fill="#242936">
+    <rect x="100" y="85" width="130" height="66" rx="33" fill="#fff" stroke="#dfe4e2" stroke-width="2"/>
+    <text x="165" y="127" text-anchor="middle">Hoje</text>
+    <rect x="246" y="85" width="160" height="66" rx="33" fill="#fff" stroke="#dfe4e2" stroke-width="2"/>
+    <text x="326" y="127" text-anchor="middle">Semana</text>
+    <rect x="422" y="85" width="130" height="66" rx="33" fill="#fff" stroke="#dfe4e2" stroke-width="2"/>
+    <text x="487" y="127" text-anchor="middle">Mês</text>
+    <rect x="568" y="85" width="130" height="66" rx="33" fill="#f1fbf3" stroke="#36bd55" stroke-width="2"/>
+    <text x="633" y="127" text-anchor="middle" fill="#35994c">Ano</text>
+  </g>
+
+  <text x="100" y="205" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#242936">Evolução no período</text>
+  <text x="100" y="239" font-family="Inter, Arial, sans-serif" font-size="18" fill="#737b88">Valores vendidos por mês</text>
+
+  <g stroke="#e7eae8" stroke-width="2">
+    <line x1="180" y1="290" x2="1090" y2="290"/>
+    <line x1="180" y1="370" x2="1090" y2="370"/>
+    <line x1="180" y1="450" x2="1090" y2="450"/>
+    <line x1="180" y1="530" x2="1090" y2="530"/>
+    <line x1="180" y1="610" x2="1090" y2="610"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="17" fill="#8a919c" text-anchor="end">
+    <text x="160" y="296">R$ 8 mil</text>
+    <text x="160" y="376">R$ 6 mil</text>
+    <text x="160" y="456">R$ 4 mil</text>
+    <text x="160" y="536">R$ 2 mil</text>
+    <text x="160" y="616">R$ 0</text>
+  </g>
+
+  <path d="M226 542 L300 516 L374 555 L448 482 L522 450 L596 425 L670 468 L744 392 L818 354 L892 322 L966 278 L1040 240 L1040 610 L226 610 Z" fill="url(#bar)" opacity=".24"/>
+  <polyline points="226,542 300,516 374,555 448,482 522,450 596,425 670,468 744,392 818,354 892,322 966,278 1040,240" fill="none" stroke="#25bd50" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#fff" stroke="#25bd50" stroke-width="5">
+    <circle cx="226" cy="542" r="8"/><circle cx="300" cy="516" r="8"/>
+    <circle cx="374" cy="555" r="8"/><circle cx="448" cy="482" r="8"/>
+    <circle cx="522" cy="450" r="8"/><circle cx="596" cy="425" r="8"/>
+    <circle cx="670" cy="468" r="8"/><circle cx="744" cy="392" r="8"/>
+    <circle cx="818" cy="354" r="8"/><circle cx="892" cy="322" r="8"/>
+    <circle cx="966" cy="278" r="8"/><circle cx="1040" cy="240" r="8"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="16" fill="#737b88" text-anchor="middle">
+    <text x="226" y="646">Jan</text><text x="300" y="646">Fev</text>
+    <text x="374" y="646">Mar</text><text x="448" y="646">Abr</text>
+    <text x="522" y="646">Mai</text><text x="596" y="646">Jun</text>
+    <text x="670" y="646">Jul</text><text x="744" y="646">Ago</text>
+    <text x="818" y="646">Set</text><text x="892" y="646">Out</text>
+    <text x="966" y="646">Nov</text><text x="1040" y="646">Dez</text>
+  </g>
+</svg>
