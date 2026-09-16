@@ -1,3 +1,8 @@
+const standardStyles = document.createElement('link');
+standardStyles.rel = 'stylesheet';
+standardStyles.href = '/assets/lp-standard.css';
+document.head.appendChild(standardStyles);
+
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.getElementById('mainNav');
 const dropdowns = [...document.querySelectorAll('.nav-dropdown')];
@@ -43,6 +48,17 @@ document.addEventListener('keydown', (event) => {
       toggle.setAttribute('aria-label', 'Abrir menu');
     }
   }
+});
+
+const featureRoutes = {
+  '/#agenda': '/agenda/',
+  '/#vendas': '/vendas/',
+  '/#estoque': '/estoque/'
+};
+
+document.querySelectorAll('.main-nav a, .site-footer a').forEach((link) => {
+  const href = link.getAttribute('href');
+  if (featureRoutes[href]) link.setAttribute('href', featureRoutes[href]);
 });
 
 const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
