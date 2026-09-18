@@ -51,6 +51,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 const featureRoutes = {
+  '/#orcamentos': '/orcamentos/',
   '/#agenda': '/agenda/',
   '/#vendas': '/vendas/',
   '/#estoque': '/estoque/'
@@ -59,6 +60,18 @@ const featureRoutes = {
 document.querySelectorAll('.main-nav a, .site-footer a').forEach((link) => {
   const href = link.getAttribute('href');
   if (featureRoutes[href]) link.setAttribute('href', featureRoutes[href]);
+});
+
+// Mantém Orçamento digital disponível nos menus globais sem duplicar o item.
+document.querySelectorAll('.nav-submenu, .footer-column').forEach((group) => {
+  const quoteLink = [...group.querySelectorAll('a')].find((a) => a.getAttribute('href') === '/orcamentos/');
+  const alreadyHasDigital = [...group.querySelectorAll('a')].some((a) => a.getAttribute('href') === '/orcamento-digital/');
+  if (quoteLink && !alreadyHasDigital) {
+    const digitalLink = document.createElement('a');
+    digitalLink.href = '/orcamento-digital/';
+    digitalLink.textContent = 'Orçamento digital';
+    quoteLink.insertAdjacentElement('afterend', digitalLink);
+  }
 });
 
 const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
