@@ -51,6 +51,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 const featureRoutes = {
+  '/#orcamentos': '/orcamentos/',
   '/#agenda': '/agenda/',
   '/#vendas': '/vendas/',
   '/#estoque': '/estoque/'
