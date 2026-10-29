@@ -1,3 +1,64 @@
+// Tracking global do Valeu.
+// REGRA: toda página do site deve carregar este arquivo para garantir GA4 e click_playstore.
+(function initValeuAnalytics() {
+  const GA_ID = 'G-WFS6CHS0P5';
+
+  function ensureGtag() {
+    window.dataLayer = window.dataLayer || [];
+
+    if (typeof window.gtag !== 'function') {
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
+    }
+
+    const selector = 'script[src*="googletagmanager.com/gtag/js?id=' + GA_ID + '"]';
+    const hasGtagScript = Boolean(document.querySelector(selector));
+
+    if (!hasGtagScript) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(script);
+
+      window.gtag('js', new Date());
+      window.gtag('config', GA_ID);
+    }
+  }
+
+  function getCtaLocation(link) {
+    if (link.dataset.gaLocation) return link.dataset.gaLocation;
+
+    const section = link.closest('section');
+    if (section && section.id) return section.id;
+
+    if (link.closest('.site-header')) return 'header';
+    if (link.closest('.site-footer')) return 'footer';
+    if (section) return section.className || 'section';
+
+    return 'unknown';
+  }
+
+  ensureGtag();
+
+  // Captura antes dos handlers antigos de algumas páginas para evitar evento duplicado.
+  document.addEventListener('click', function (event) {
+    const target = event.target instanceof Element ? event.target : null;
+    const link = target ? target.closest('a[href*="play.google.com"]') : null;
+    if (!link) return;
+
+    event.stopPropagation();
+    ensureGtag();
+
+    window.gtag('event', 'click_playstore', {
+      link_url: link.href,
+      cta_location: getCtaLocation(link),
+      page_path: window.location.pathname,
+      page_title: document.title
+    });
+  }, true);
+})();
+
 const standardStyles = document.createElement('link');
 standardStyles.rel = 'stylesheet';
 standardStyles.href = '/assets/lp-standard.css';
