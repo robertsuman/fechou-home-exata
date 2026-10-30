@@ -1342,3 +1342,13 @@ svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   .nav-submenu a{padding:11px 12px}
   .footer-grid{grid-template-columns:1fr}
 }
+
+/* Navegação e rodapé unificados com a Central de Ajuda */
+.site-header .nav-help-dropdown summary{color:#101419}
+.site-header .nav-help-dropdown[open] summary{color:#101419}
+.site-header .nav-help-dropdown summary:hover{color:#101419}
+.site-footer .footer-grid{grid-template-columns:minmax(235px,1.45fr) repeat(4,minmax(135px,1fr)) !important;gap:28px !important}
+.site-footer .footer-help a{line-height:1.45}
+@media(max-width:1180px){.site-footer .footer-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:34px !important}}
+@media(max-width:860px){.site-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:30px !important}}
+@media(max-width:600px){.site-footer .footer-grid{grid-template-columns:1fr !important;gap:25px !important}}

@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Valeu | App de Orçamentos e Agenda para Prestadores de Serviço</title>
   <meta name="description" content="Crie orçamentos em PDF, organize seus serviços na agenda e cuide do seu negócio pelo celular. Valeu é gratuito para autônomos e prestadores de serviço.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://sejavaleu.com.br/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Valeu | App de Orçamentos e Agenda para Prestadores de Serviço">
@@ -89,8 +91,19 @@ document.addEventListener('DOMContentLoaded', function () {
           <a href="/pedreiros/">Pedreiros</a>
         </div>
       </details>
-
-      <a class="nav-direct" href="/#como-funciona">Como funciona</a>
+      <details class="nav-dropdown nav-help-dropdown">
+        <summary>Ajuda</summary>
+        <div class="nav-submenu">
+          <a href="/ajuda/">Central de Ajuda</a>
+          <a href="/ajuda/chegando-no-valeu/">Chegando no Valeu?</a>
+          <a href="/ajuda/primeiros-passos/">Primeiros passos</a>
+          <a href="/ajuda/orcamentos/">Orçamentos</a>
+          <a href="/ajuda/agenda/">Agenda</a>
+          <a href="/ajuda/cadastros/">Clientes, serviços e produtos</a>
+          <a href="/ajuda/vendas/">Vendas e pagamentos</a>
+          <a href="/ajuda/relatorios-estoque/">Relatórios e estoque</a>
+        </div>
+      </details>
       <a href="https://play.google.com/store/apps/details?id=com.nkapps.nkplus" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer" data-ga-location="header-global">Baixar grátis</a>
     </nav>
   </div>
@@ -452,10 +465,21 @@ document.addEventListener('DOMContentLoaded', function () {
       <a href="/pedreiros/">Pedreiros</a>
     </div>
 
+    <div class="footer-column footer-help">
+      <h4>Ajuda</h4>
+      <a href="/ajuda/">Central de Ajuda</a>
+      <a href="/ajuda/chegando-no-valeu/">Chegando no Valeu?</a>
+      <a href="/ajuda/primeiros-passos/">Primeiros passos</a>
+      <a href="/ajuda/orcamentos/">Orçamentos</a>
+      <a href="/ajuda/agenda/">Agenda</a>
+      <a href="/ajuda/cadastros/">Clientes, serviços e produtos</a>
+      <a href="/ajuda/vendas/">Vendas e pagamentos</a>
+      <a href="/ajuda/relatorios-estoque/">Relatórios e estoque</a>
+    </div>
+
     <div class="footer-column">
       <h4>Valeu</h4>
       <a href="/">Página inicial</a>
-      <a href="/#como-funciona">Como funciona</a>
       <a href="/privacidade/">Política de Privacidade</a>
       <a href="/termos/">Termos de Uso</a>
     </div>
@@ -466,6 +490,6 @@ document.addEventListener('DOMContentLoaded', function () {
     <span class="footer-signature">Seja Valeu.</span>
   </div>
 </footer>
-  <script src="assets/script.js"></script>
+  <script src="/assets/script.js"></script>
 </body>
 </html>
