@@ -135,7 +135,7 @@
 /* Cabeçalho e rodapé padrão em todas as páginas */
 .site-header .nav-help-dropdown summary{color:#101419}
 .site-header .nav-help-dropdown[open] summary{color:#101419}
-.site-header .nav-help-dropdown summary:hover{color:var(--darkgreen)}
+.site-header .nav-help-dropdown summary:hover{color:#101419}
 .site-footer{padding:48px 0 28px;background:#fff}
 .site-footer .footer-grid{display:grid;grid-template-columns:minmax(235px,1.45fr) repeat(4,minmax(135px,1fr)) !important;gap:28px !important;align-items:start}
 .site-footer .footer-brand img{width:180px;margin-bottom:18px}
