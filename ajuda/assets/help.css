@@ -28,3 +28,9 @@
 .lesson-next{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;border-top:1px solid #e7eaee;padding-top:22px}.lesson-next a{color:#168f42;font-size:14px;font-weight:700}
 .article-sidebar .toc-step{font-size:12px;padding-left:11px;margin:10px 0;line-height:1.5;border-left:2px solid #e1ebdf}.article-sidebar{max-height:calc(100vh - 138px);overflow:auto}.article-sidebar h3{text-transform:none;line-height:1.5}
 @media(max-width:680px){.lesson-step>p,.lesson-help{margin-left:0}.screen-guide{margin:18px 0 0;display:block}.screen-guide img{width:230px;max-width:100%}.screen-guide figcaption{max-width:360px}.lesson-step h3{font-size:17px}.lesson-note{padding:18px}.article-main>h2{font-size:22px}}
+
+/* Navegação entre os guias e imagens em tamanho legível */
+.screen-guide img{width:300px;max-width:60%;max-height:none;height:auto;object-fit:contain}
+.screen-guide figcaption{flex:1;max-width:210px}
+.related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:25px}.related-guides a{padding:19px 21px;border:1px solid #dfece3;border-radius:13px;display:grid;gap:8px;transition:background .15s}.related-guides a:hover{background:#f3fbf5}.related-guides strong{font-size:12px;color:#778a80}.related-guides span{font-size:15px;color:#168a3b;font-weight:750;line-height:1.5}
+@media(max-width:680px){.related-guides{grid-template-columns:1fr}.screen-guide img{width:280px;max-width:100%}}
