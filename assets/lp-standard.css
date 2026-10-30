@@ -156,3 +156,9 @@
 
   .site-footer .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* Cinco colunas do rodapé com a nova seção Ajuda */
+.site-footer .footer-grid{grid-template-columns:minmax(235px,1.45fr) repeat(4,minmax(135px,1fr));gap:28px}
+@media(max-width:1180px){.site-footer .footer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:860px){.site-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.site-footer .footer-grid{grid-template-columns:1fr}}

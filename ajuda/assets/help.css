@@ -131,3 +131,24 @@
  .site-header .nav-submenu::before{display:none}
  .site-header .nav-submenu a{padding:11px 12px}
 }
+
+/* Cabeçalho e rodapé padrão em todas as páginas */
+.site-header .nav-help-dropdown summary{color:#101419}
+.site-header .nav-help-dropdown[open] summary{color:#101419}
+.site-header .nav-help-dropdown summary:hover{color:var(--darkgreen)}
+.site-footer{padding:48px 0 28px;background:#fff}
+.site-footer .footer-grid{display:grid;grid-template-columns:minmax(235px,1.45fr) repeat(4,minmax(135px,1fr)) !important;gap:28px !important;align-items:start}
+.site-footer .footer-brand img{width:180px;margin-bottom:18px}
+.site-footer .footer-brand>p{max-width:290px;margin:0;color:var(--muted);font-size:14px;line-height:1.7}
+.site-footer .footer-actions{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:22px}
+.site-footer .footer-play img{width:165px}
+.site-footer .footer-instagram{display:inline-flex;align-items:center;gap:9px;color:#4f5968;font-size:14px;font-weight:600}
+.site-footer .footer-instagram svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}
+.site-footer .footer-column h4{margin:0 0 18px;color:#222635;font-size:14px;font-weight:800}
+.site-footer .footer-column a{display:block;margin-bottom:11px;color:#6a7280;font-size:14px;line-height:1.5}
+.site-footer .footer-column a:hover{color:var(--darkgreen)}
+.site-footer .footer-bottom{margin-top:42px;padding-top:20px;border-top:1px solid #eceff3;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#7a8390;font-size:13px}
+.site-footer .footer-signature{color:var(--darkgreen);font-weight:700}
+@media(max-width:1180px){.site-footer .footer-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important}}
+@media(max-width:860px){.site-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+@media(max-width:600px){.site-footer .footer-grid{grid-template-columns:1fr !important}.site-footer .footer-bottom{flex-direction:column;align-items:flex-start}}
