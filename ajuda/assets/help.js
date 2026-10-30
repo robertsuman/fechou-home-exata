@@ -1,8 +1,42 @@
 
 (function(){
- const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('.main-nav');
- if(menu&&nav){menu.addEventListener('click',()=>{const opened=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(opened))})}
- document.addEventListener('click',e=>{if(!e.target.closest('.nav-drop'))document.querySelectorAll('.nav-drop').forEach(x=>x.open=false)});
+ const toggle=document.querySelector('.menu-toggle');
+ const nav=document.getElementById('mainNav');
+ const dropdowns=[...document.querySelectorAll('.nav-dropdown')];
+ if(toggle&&nav){
+  toggle.addEventListener('click',()=>{
+   const isOpen=nav.classList.toggle('open');
+   toggle.setAttribute('aria-expanded',String(isOpen));
+   toggle.setAttribute('aria-label',isOpen?'Fechar menu':'Abrir menu');
+  });
+  nav.querySelectorAll('a').forEach(link=>{
+   link.addEventListener('click',()=>{
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Abrir menu');
+    dropdowns.forEach(item=>item.removeAttribute('open'));
+   });
+  });
+ }
+ dropdowns.forEach(dropdown=>{
+  dropdown.addEventListener('toggle',()=>{
+   if(!dropdown.open)return;
+   dropdowns.forEach(item=>{if(item!==dropdown)item.removeAttribute('open')});
+  });
+ });
+ document.addEventListener('click',event=>{
+  if(!event.target.closest('.nav-dropdown'))dropdowns.forEach(item=>item.removeAttribute('open'));
+ });
+ document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'){
+   dropdowns.forEach(item=>item.removeAttribute('open'));
+   if(nav&&toggle){
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.setAttribute('aria-label','Abrir menu');
+   }
+  }
+ });
  const input=document.getElementById('helpSearch'),panel=document.getElementById('searchResults');if(!input||!panel)return;
  const catalog=[{"title":"O que é o Valeu e como ele funciona?","desc":"Conheça o Valeu, aplicativo de orçamentos e agenda para profissionais autônomos e prestadores de serviço.","slug":"o-que-e-o-valeu","cat":"Chegando no Valeu?"},{"title":"Para quem o Valeu é indicado?","desc":"Descubra como profissionais autônomos, MEIs e pequenos negócios podem utilizar o Valeu.","slug":"para-quem-e-o-valeu","cat":"Chegando no Valeu?"},{"title":"O Valeu é gratuito? Quanto custa?","desc":"Entenda a disponibilidade gratuita do Valeu e saiba onde consultar informações sobre eventuais planos pagos.","slug":"o-valeu-e-gratuito","cat":"Chegando no Valeu?"},{"title":"É seguro usar o Valeu? Como meus dados são tratados?","desc":"Veja o que a Política de Privacidade informa sobre proteção de dados, armazenamento e responsabilidades no Valeu.","slug":"e-seguro-usar-o-valeu","cat":"Chegando no Valeu?"},{"title":"Como baixar e acessar o Valeu","desc":"Aprenda onde instalar o aplicativo Valeu no Android e como iniciar a utilização.","slug":"como-baixar-e-acessar-o-valeu","cat":"Chegando no Valeu?"},{"title":"Como usar o menu + do Valeu","desc":"Entenda a diferença entre Ações e Cadastros no botão + para criar orçamentos, vendas, compromissos, clientes, serviços e produtos.","slug":"como-usar-botao-mais-valeu","cat":"Primeiros passos"},{"title":"Como começar a usar o Valeu","desc":"Veja como dar os primeiros passos no aplicativo Valeu para organizar clientes, orçamentos e compromissos.","slug":"como-comecar-a-usar-o-valeu","cat":"Primeiros passos"},{"title":"Como criar um orçamento pelo celular","desc":"Aprenda a criar um orçamento profissional no aplicativo Valeu com cliente, serviços, materiais e valores.","slug":"como-criar-orcamento-pelo-celular","cat":"Orçamentos"},{"title":"Como gerar um orçamento em PDF","desc":"Saiba como gerar um PDF de orçamento para apresentar seus serviços e valores ao cliente.","slug":"como-gerar-orcamento-em-pdf","cat":"Orçamentos"},{"title":"Como enviar um orçamento pelo WhatsApp","desc":"Entenda como compartilhar pelo WhatsApp o orçamento criado no aplicativo Valeu.","slug":"como-enviar-orcamento-whatsapp","cat":"Orçamentos"},{"title":"Como acompanhar o status dos orçamentos","desc":"Veja como organizar seus orçamentos por etapa e acompanhar propostas em negociação no Valeu.","slug":"como-acompanhar-status-orcamentos","cat":"Orçamentos"},{"title":"Como organizar a agenda de serviços","desc":"Aprenda a organizar visitas, horários e compromissos no aplicativo Valeu usando as visualizações Dia e Mês.","slug":"como-organizar-agenda-servicos","cat":"Agenda"},{"title":"Como cadastrar clientes no Valeu","desc":"Saiba como organizar os dados dos seus clientes e usá-los nos orçamentos e atendimentos.","slug":"como-cadastrar-clientes","cat":"Clientes e serviços"},{"title":"Como cadastrar serviços e produtos","desc":"Aprenda a cadastrar os serviços e materiais que você utiliza no seu trabalho e reutilizá-los em orçamentos.","slug":"como-cadastrar-servicos-produtos","cat":"Clientes e serviços"},{"title":"Como transformar um orçamento em venda","desc":"Veja como registrar como venda um orçamento aceito pelo cliente e acompanhar o negócio no Valeu.","slug":"como-transformar-orcamento-em-venda","cat":"Vendas e pagamentos"},{"title":"Como consultar relatórios de orçamentos e vendas","desc":"Entenda como acompanhar volume, valores e desempenho dos seus orçamentos e vendas no Valeu.","slug":"como-consultar-relatorios","cat":"Relatórios e estoque"},{"title":"Como controlar materiais e estoque no Valeu","desc":"Saiba como acompanhar quantidades, entradas e saídas de materiais e produtos no Valeu.","slug":"como-controlar-estoque","cat":"Relatórios e estoque"}];
  const norm=s=>s.toLocaleLowerCase('pt-BR').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
