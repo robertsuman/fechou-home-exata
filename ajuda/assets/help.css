@@ -172,3 +172,13 @@
 .help-collection-preview img{width:95px;max-height:210px;object-fit:contain;border-radius:10px}
 .help-collection-preview p{font-size:14px;line-height:1.7;color:#637369}
 @media(max-width:680px){.lesson-step .help-visual-figure{margin-left:0}.illustrated-related{grid-template-columns:1fr}.help-collection-preview{flex-direction:column;align-items:flex-start}}
+
+/* Vídeos reais de tela nos tutoriais da Central de Ajuda */
+.help-video-figure{max-width:360px;width:min(100%,360px);padding:14px;margin:20px 0 28px 50px;border:1px solid #daece0;background:#f7fbf8;border-radius:16px}
+.help-tutorial-video{display:block;width:100%;max-height:570px;object-fit:contain;background:#1b2420;border-radius:11px;border:1px solid #e4eae7}
+.help-video-figure figcaption{font-size:12px;line-height:1.65;color:#54655b;margin-top:12px}
+.help-video-figure figcaption strong{color:#2a4231}
+.help-video-figure figcaption span{display:block;margin-top:5px;color:#6d7b72}
+.help-video-figure video:focus-visible{outline:3px solid #1fc855;outline-offset:3px}
+@media(max-width:760px){.help-video-figure{margin-left:0;padding:10px}}
+@media(prefers-reduced-motion:reduce){.help-tutorial-video{animation:none}}
